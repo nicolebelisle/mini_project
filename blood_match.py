@@ -23,7 +23,8 @@ else:
     print ("Patient F6 and M8 are not a match")
 
 # Check result with a POST request
-# Check your result by making a POST request to URL/match_check. Send a JSON with the following format:
-# {"Name": "<name>", "Match": "<answer>"}
-# Replace <name> with your Duke Net ID and <answer> with either Yes or No.
-# This request will return "Correct" or "Incorrect".
+
+request_json = {"Name": 'nb202', "Match": 'Yes'}
+p = requests.post("http://vcm-7631.vm.duke.edu:5002/match_check",json=request_json)
+print(p.text)
+    
