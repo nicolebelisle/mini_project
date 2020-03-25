@@ -27,4 +27,3 @@ else:
 request_json = {"Name": 'nb202', "Match": 'Yes'}
 p = requests.post("http://vcm-7631.vm.duke.edu:5002/match_check",json=request_json)
 print(p.text)
-    
